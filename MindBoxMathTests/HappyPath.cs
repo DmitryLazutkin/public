@@ -45,7 +45,7 @@ public class HappyPathTests
     }
 
     [Test]
-    public void SquaredTriangle()
+    public void RightTriangle()
     {
         double a = 3;
         double b = 4;
