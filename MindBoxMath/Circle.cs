@@ -21,7 +21,7 @@ public class Circle : Shape
     /// Calculates the square of circle using pi * R^2 formula
     /// </summary>
     /// <returns>square of circle</returns>
-    public override double Sqaure()
+    public override double CalcSqaure()
     {
         return Math.PI * Math.Pow(radius, 2);
     }

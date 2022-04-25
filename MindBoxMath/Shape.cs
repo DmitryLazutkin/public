@@ -9,5 +9,5 @@ public abstract class Shape
     /// Returns shape square
     /// </summary>
     /// <returns>shape square</returns>
-    public abstract double Sqaure();
+    public abstract double CalcSqaure();
 }

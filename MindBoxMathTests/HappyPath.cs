@@ -16,7 +16,7 @@ public class HappyPathTests
     public void CircleSqaure()
     {
         double radius = 5.5;
-        var square = new Circle(radius).Sqaure();
+        var square = new Circle(radius).CalcSqaure();
         Assert.AreEqual(square, Math.PI * Math.Pow(radius, 2));
     }
 
@@ -25,7 +25,7 @@ public class HappyPathTests
     {
         try
         {
-            var sqaure = new Circle(0).Sqaure();
+            var sqaure = new Circle(0).CalcSqaure();
             Assert.Zero(sqaure);
         }
         catch(ArgumentException)
@@ -40,8 +40,18 @@ public class HappyPathTests
         double a = 3.123456789;
         double b = 4.123456789;
         double c = 5.123456789;
-        var square = new Triangle(a, b, c).Sqaure();
+        var square = new Triangle(a, b, c).CalcSqaure();
         Assert.AreEqual(square, 6.438461847202264);
+    }
+
+    [Test]
+    public void SquaredTriangle()
+    {
+        double a = 3;
+        double b = 4;
+        double c = 5;
+        var isRight = new Triangle(a, b, c).IsRight;
+        Assert.True(isRight);
     }
 
     [Test]
@@ -57,7 +67,7 @@ public class HappyPathTests
 
         foreach(var s in shapes)
         {
-            Assert.AreEqual(Calculator.Sqaure(s), s.Sqaure());
+            Assert.AreEqual(Calculator.CalcSqaure(s), s.CalcSqaure());
         }
 
     }
