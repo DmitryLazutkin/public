@@ -9,7 +9,7 @@ public class Calculator
     /// Calculate sqaure of shape
     /// </summary>
     /// <param name="s">instance of shape to calculate sqaure</param>
-    /// <returns>square of shape</returns>
+    /// <returns>square of shape or <exception>NullReferenceException</exception></returns>
     public static double Sqaure(Shape s)
     {
         return s.Sqaure();
